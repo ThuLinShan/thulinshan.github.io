@@ -1,0 +1,284 @@
+:root {
+  --color-dark: #211d45ff;
+  --color-dark-half: rgba(33, 29, 69, 0.514);
+  --color-blue: rgb(118, 212, 255);
+  --color-blue-half: rgba(118, 212, 255, 0.705);
+  --color-light: #66ffc7ff;
+  --color-light-half: rgba(102, 255, 199, 0.637);
+  --color-primary: #383179ff;
+  --color-dark-bg: rgb(36, 35, 35);
+  --color-dark-hover: rgb(22, 20, 41);
+  --color-dark-bg-hover: rgb(37, 45, 51);
+  --color-red: rgb(202, 45, 45);
+  --color-yelloe: rgb(255, 255, 91);
+  --color-yelloe-half: rgba(255, 255, 91, 0.5);
+  --color-white: white;
+  --color-secondary: rgb(121, 121, 121);
+  --color-test: rgb(255, 36, 28);
+}
+
+#raindrop {
+  text-align: center;
+  position: relative;
+  min-height: 120vh;
+}
+@media (max-width: 800px) {
+  #raindrop {
+    height: 150vh;
+  }
+}
+
+#raindrop .raindrop {
+  position: absolute;
+  width: 90vw;
+  left: 50%;
+  top: 50%;
+  -rain-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#raindrop .raindrop-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+#raindrop .raindrop-bg > div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: white;
+}
+
+#raindrop .raindrop-bg > div:nth-child(1) {
+  left: 15%;
+}
+
+#raindrop .raindrop-bg > div:nth-child(2) {
+  left: 25%;
+}
+
+#raindrop .raindrop-bg > div:nth-child(3) {
+  left: 50%;
+}
+
+#raindrop .raindrop-bg > div:nth-child(4) {
+  left: 65%;
+}
+#raindrop .raindrop-bg > div:nth-child(5) {
+  left: 90%;
+}
+
+#raindrop .raindrop-bg > div:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -0.5px;
+  -rain-transform: translateY(-160px);
+  -ms-transform: translateY(-160px);
+  transform: translateY(-160px);
+  height: 160px;
+  width: 3px;
+  background-color: var(--color-primary);
+}
+
+@keyframes drop {
+  90% {
+    height: 20px;
+  }
+
+  100% {
+    height: 160px;
+    -rain-transform: translateY(calc(100vh + 160px));
+    transform: translateY(calc(100vh + 160px));
+  }
+}
+
+#raindrop .raindrop-bg > div:nth-child(1):after {
+  -rain-animation: drop 3s infinite linear;
+  animation: drop 3s infinite linear;
+  -rain-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+#raindrop .raindrop-bg > div:nth-child(2):after {
+  -rain-animation: drop 2s infinite linear;
+  animation: drop 2s infinite linear;
+  -rain-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+#raindrop .raindrop-bg > div:nth-child(3):after {
+  -rain-animation: drop 3s infinite linear;
+  animation: drop 3s infinite linear;
+  -rain-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+}
+
+#raindrop .raindrop-bg > div:nth-child(4):after {
+  -rain-animation: drop 2s infinite linear;
+  animation: drop 2s infinite linear;
+  -rain-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
+#raindrop .raindrop-bg > div:nth-child(5):after {
+  -rain-animation: drop 1s infinite linear;
+  animation: drop 2s infinite linear;
+  -rain-animation-delay: 1.7s;
+  animation-delay: 1.7s;
+}
+
+/* second banner animation */
+.raindrop h2 {
+  font-size: 40px;
+  margin: 10px 0;
+}
+.raindrop h3 {
+  font-size: 30px;
+  margin: 10px 0;
+}
+.raindrop p {
+  font-size: 17px;
+  margin: 10px 0;
+}
+/* raindrop banner end */
+
+/* raindrop2 banner */
+/* raindrop2 banner animation */
+#raindrop2 {
+  text-align: center;
+  position: relative;
+  min-height: 50vh;
+}
+@media (max-width: 800px) {
+  #raindrop2 {
+    height: 70vh;
+  }
+}
+
+#raindrop2 .raindrop2 {
+  position: absolute;
+  width: 90vw;
+  left: 50%;
+  top: 50%;
+  -rain-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#raindrop2 .raindrop2-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+#raindrop2 .raindrop2-bg > div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: var(--color-dark);
+}
+
+#raindrop2 .raindrop2-bg > div:nth-child(1) {
+  left: 15%;
+}
+
+#raindrop2 .raindrop2-bg > div:nth-child(2) {
+  left: 25%;
+}
+
+#raindrop2 .raindrop2-bg > div:nth-child(3) {
+  left: 50%;
+}
+
+#raindrop2 .raindrop2-bg > div:nth-child(4) {
+  left: 65%;
+}
+#raindrop2 .raindrop2-bg > div:nth-child(5) {
+  left: 90%;
+}
+
+#raindrop2 .raindrop2-bg > div:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -0.5px;
+  -rain-transform: translateY(-160px);
+  -ms-transform: translateY(-160px);
+  transform: translateY(-160px);
+  height: 160px;
+  width: 3px;
+  background-color: var(--color-light);
+}
+
+@keyframes drop {
+  90% {
+    height: 20px;
+  }
+
+  100% {
+    height: 160px;
+    -rain-transform: translateY(calc(100vh + 160px));
+    transform: translateY(calc(100vh + 160px));
+  }
+}
+
+#raindrop2 .raindrop2-bg > div:nth-child(1):after {
+  -rain-animation: drop 3s infinite linear;
+  animation: drop 3s infinite linear;
+  -rain-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+#raindrop2 .raindrop2-bg > div:nth-child(2):after {
+  -rain-animation: drop 2s infinite linear;
+  animation: drop 2s infinite linear;
+  -rain-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+#raindrop2 .raindrop2-bg > div:nth-child(3):after {
+  -rain-animation: drop 3s infinite linear;
+  animation: drop 3s infinite linear;
+  -rain-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+}
+
+#raindrop2 .raindrop2-bg > div:nth-child(4):after {
+  -rain-animation: drop 2s infinite linear;
+  animation: drop 2s infinite linear;
+  -rain-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
+#raindrop2 .raindrop2-bg > div:nth-child(5):after {
+  -rain-animation: drop 1s infinite linear;
+  animation: drop 2s infinite linear;
+  -rain-animation-delay: 1.7s;
+  animation-delay: 1.7s;
+}
+
+/* second banner animation */
+.raindrop2 h2 {
+  font-size: 40px;
+  margin: 10px 0;
+}
+.raindrop2 h3 {
+  font-size: 30px;
+  margin: 10px 0;
+}
+.raindrop2 p {
+  font-size: 17px;
+  margin: 10px 0;
+}
+/* second banner end */
