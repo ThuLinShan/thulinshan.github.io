@@ -154,11 +154,24 @@ nav p {
   width: 80%;
 }
 
+.skills-icon {
+  height: 150px;
+  width: 150px;
+}
+
+@media (max-width: 768px) {
+  /* Adjust this breakpoint as needed */
+  .skills-icon {
+    height: 70px;
+    width: 70px;
+  }
+}
+
 .spot-img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 120%;
+  width: 110%;
   height: 100%;
   object-fit: cover; /* Ensure the image covers the entire div */
   z-index: -1;
@@ -666,6 +679,9 @@ nav p {
 .w-fit {
   width: fit-content;
 }
+.h-fit {
+  height: fit-content;
+}
 .align-center {
   align-items: center;
 }
@@ -683,6 +699,12 @@ nav p {
 }
 .mb-5 {
   margin-bottom: 30px;
+}
+.mb-2 {
+  margin-bottom: 12px;
+}
+.p-3 {
+  padding: 15px;
 }
 .p-5 {
   padding: 30px;
