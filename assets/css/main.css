@@ -781,6 +781,9 @@ nav p {
 .w-50 {
   width: 50%;
 }
+.w-75 {
+  width: 75%;
+}
 .ms-5 {
   margin-left: 5rem;
 }
